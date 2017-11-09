@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#if __has_include(&lt;#header#&gt;)
-    &lt;#header#&gt;
+    #import &lt;#header#&gt;
 #endif</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>471844F6-C7DD-4C28-A3BF-E23BD8E10D06</string>
