@@ -9,9 +9,11 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__has_include(&lt;#header#&gt;)</string>
+	<string>#if __has_include(&lt;#header#&gt;)
+    &lt;#header#&gt;
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6601CA84-C076-44BE-A2C3-0B30D13E1885</string>
+	<string>471844F6-C7DD-4C28-A3BF-E23BD8E10D06</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
@@ -19,6 +21,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
