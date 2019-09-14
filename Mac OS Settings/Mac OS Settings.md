@@ -53,9 +53,31 @@ $ xattr -c <file>
 
 
 
+## 5、修复系统屏幕截图不保存到桌面的问题[^3]
+
+
+
+![](images/2.png)
+
+
+
+命令行执行下面命令
+
+```shell
+defaults write com.apple.screencapture location ~/Desktop
+defaults write com.apple.screencapture target file
+killall SystemUIServer
+```
+
+
+
+
+
 ## References
 
 [^1]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
 
 [^2]:https://stackoverflow.com/questions/4833052/how-do-i-remove-the-extended-attributes-on-a-file-in-mac-os-x
+
+[^3]:https://apple.stackexchange.com/a/348043
 
