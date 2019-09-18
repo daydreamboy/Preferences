@@ -81,6 +81,12 @@ killall SystemUIServer
 
 
 
+```shell
+$ brew install p7zip
+```
+
+
+
 TODO
 
 
