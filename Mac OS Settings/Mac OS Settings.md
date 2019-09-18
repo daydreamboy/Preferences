@@ -71,6 +71,20 @@ killall SystemUIServer
 
 
 
+## 6、制作Finder中文件夹或文件的右键菜单[^4]
+
+
+
+* Open Applications -> Automator
+* File -> New in the menu bar
+* Chose a document type of Service
+
+
+
+TODO
+
+
+
 
 
 ## References
@@ -80,4 +94,8 @@ killall SystemUIServer
 [^2]:https://stackoverflow.com/questions/4833052/how-do-i-remove-the-extended-attributes-on-a-file-in-mac-os-x
 
 [^3]:https://apple.stackexchange.com/a/348043
+
+[^4]:https://davidwalsh.name/mac-context-menu
+
+
 
