@@ -75,11 +75,29 @@ killall SystemUIServer
 
 
 
-* Open Applications -> Automator
-* File -> New in the menu bar
-* Chose a document type of Service
+### （1）新建一个workflow
+
+* Open **Applications** -> **Automator**
+* **File** -> **New** in the menu bar
+* Chose a document type of **Service**/**Quick Action**
+
+Workflow receives current选择为**files or folders**，in选择为**Finder**，Image选择喜欢的图标icon。
 
 
+
+### （2）编辑执行脚本
+
+在左侧搜索框搜索**Run Shell Script**，拖拽到编辑区域。
+
+
+
+以7z命令行作为右键菜单为例
+
+Shell选择**/bin/bash**，Pass input选择**as arguments**。
+
+
+
+然后，安装命令行工具p7zip
 
 ```shell
 $ brew install p7zip
@@ -87,9 +105,50 @@ $ brew install p7zip
 
 
 
-TODO
+在刚才新建的Run Shell Script中，写入下面Shell脚本
+
+```shell
+# Note: use /usr/local/bin/7z instead of 7z for Automator
+cmd=/usr/local/bin/7z
+
+if ! [[ -x "$(command -v ${cmd})" ]]; then
+  echo "Error: ${cmd} is not installed. Please brew install p7zip" >&2
+  exit 1
+fi
+
+# Enter the first file's directory
+current_path=$(dirname "$1")
+cd "${current_path}"
+
+#echo ${current_path}
+
+args=""
+for f in "$@"
+do
+  args="${args} \"$f\""
+done
+
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+command="${cmd} a Archive@${timestamp}.7z ${args}"
+
+#echo ${command} >&2
+#exit 1
+status=$(eval "${command}")
+
+#echo ${status}
+
+exit 0
+```
 
 
+
+### （3）调试脚本
+
+​        在左侧搜索框搜索**Get Specific Finder Items**，拖拽到脚本区域上面。添加一个Finder中的文件或文件夹，作为**Run Shell Script**的输入参数，点击**Run**按钮进行调试。调试完成，点击右上角的x按钮，移除这个Action。
+
+
+
+> 示例脚本，见Automator Settings/Compress with 7z.workflow
 
 
 
