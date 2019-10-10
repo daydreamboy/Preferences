@@ -152,6 +152,20 @@ exit 0
 
 
 
+## 7、修复启动App提示“XXX” is damaged and can’t be opened. You should move it to the Trash.[^5]
+
+
+
+执行下面的命令
+
+```shell
+sudo xattr -rd com.apple.quarantine /Applications/XXX.app
+```
+
+
+
+
+
 ## References
 
 [^1]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
@@ -162,5 +176,5 @@ exit 0
 
 [^4]:https://davidwalsh.name/mac-context-menu
 
-
+[^5]:https://apple.stackexchange.com/questions/262355/xxx-cant-be-opened-you-should-move-it-to-trash-for-flash-projector-applicat
 
