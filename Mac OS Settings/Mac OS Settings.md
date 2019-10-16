@@ -164,6 +164,20 @@ sudo xattr -rd com.apple.quarantine /Applications/XXX.app
 
 
 
+## 8、修复原装lightning USB线连接电脑总是断掉的问题
+
+
+
+将lightning USB线连接电脑，执行下面命令。
+
+```shell
+$ sudo killall -STOP -c usbd
+```
+
+注意：
+
+> usbd进程没有被杀掉，只是重新启动了
+
 
 
 ## References
