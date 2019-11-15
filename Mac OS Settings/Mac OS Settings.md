@@ -4,6 +4,16 @@
 
 ## 1、显示所有隐藏文件[^1]
 
+### （1）临时显示隐藏文件
+
+使用快捷键[^6]：`⌘ + ⇧ + .`
+
+
+
+### （2）永久显示隐藏文件
+
+Terminal输入下面命令，如下
+
 ```shell
 $ defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder
 ```
@@ -191,4 +201,7 @@ $ sudo killall -STOP -c usbd
 [^4]:https://davidwalsh.name/mac-context-menu
 
 [^5]:https://apple.stackexchange.com/questions/262355/xxx-cant-be-opened-you-should-move-it-to-trash-for-flash-projector-applicat
+
+[^6]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
+
 
