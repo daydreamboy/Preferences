@@ -169,7 +169,7 @@ exit 0
 执行下面的命令
 
 ```shell
-sudo xattr -rd com.apple.quarantine /Applications/XXX.app
+$ sudo xattr -rd com.apple.quarantine /Applications/XXX.app
 ```
 
 
