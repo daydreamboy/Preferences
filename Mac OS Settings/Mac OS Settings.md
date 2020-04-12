@@ -190,6 +190,30 @@ $ sudo killall -STOP -c usbd
 
 
 
+## 9、干净卸载PyCharm
+
+除了删掉PyCharm.app，还有下面位置需要删除[^7]
+
+```shell
+$ cd ~/Library/Preferences/
+$ ls | grep -i pycharm | xargs trash
+
+$ cd ~/Library/Logs
+$ ls | grep -i pycharm | xargs trash
+
+$ cd ~/Library/Application\ Support/
+$ ls | grep -i pycharm | xargs trash
+
+$ cd ~/Library/Caches/
+$ ls | grep -i pycharm | xargs trash
+```
+
+
+
+
+
+
+
 ## References
 
 [^1]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
@@ -204,4 +228,5 @@ $ sudo killall -STOP -c usbd
 
 [^6]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
 
+[^7]:https://zhuanlan.zhihu.com/p/110013605
 
