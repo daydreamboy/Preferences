@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>disableAvailabilty</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunguarded-availability"
+    &lt;#code#&gt;
+#pragma GCC diagnostic pop</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7D37A9A4-7525-4442-803F-04DF5E9046A7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>disable availability check in new version</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>disableAvailabilty</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
