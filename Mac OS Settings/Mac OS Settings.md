@@ -210,6 +210,20 @@ $ ls | grep -i pycharm | xargs trash
 
 
 
+## 10、登录界面去掉Other用户登录
+
+执行下面命令进行禁用[^8]
+
+```shell
+sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MANAGED -bool FALSE
+```
+
+
+
+
+
+
+
 
 
 
@@ -229,4 +243,6 @@ $ ls | grep -i pycharm | xargs trash
 [^6]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
 
 [^7]:https://zhuanlan.zhihu.com/p/110013605
+
+[^8]:https://apple.stackexchange.com/questions/232449/remove-other-from-login-screen
 
