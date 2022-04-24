@@ -224,7 +224,31 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MA
 
 
 
+## 11、删除系统自带app
 
+- 重启macOS，屏幕变黑时，按住⌘+R直到出现Logo[^9]
+- Terminal，输入下面命令[^8]
+
+以macOS 10.15 Catalina为例
+
+```shell
+# csrutil status
+# csrutil disable
+# sudo mount -uw /
+# cd /Volumes/Macintosh\ HD/System/Applications/
+# rm -rf xxx.app
+# csrutil enable
+# reboot
+```
+
+
+
+说明
+
+> 1. 如果rm命令无效，再尝试`sudo mount -uw /`
+> 2. 不同的macOS系统，系统app所在目录路径不同，如下
+>    * macOS 10.15 Catalina：`/Volumes/Macintosh\ HD/System/Applications/`
+>    * macOS 10.12 Sierra、OS X 10.11 El Capitan：`/Volumes/Macintosh\ HD/Applications/`
 
 
 
@@ -245,4 +269,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MA
 [^7]:https://zhuanlan.zhihu.com/p/110013605
 
 [^8]:https://apple.stackexchange.com/questions/232449/remove-other-from-login-screen
+[^9]:https://my.oschina.net/u/4387124/blog/3250829
+[^10]:https://superuser.com/questions/1490326/how-to-delete-system-apps-in-macos-catalina
 
