@@ -220,7 +220,31 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MA
 
 
 
+## 11、压缩文件不带`__MACOSX`文件夹和`.DS_Store`文件[^9]
 
+在MacOS下，使用Finder压缩一个文件，会默认带`__MACOSX`文件夹，可能还会带`.DS_Store`。
+
+使用下面命令，避免带这些隐藏文件
+
+```shell
+$ zip -r yourFile.zip path/to/file -x ".*" -x "__MACOSX" 
+```
+
+
+
+示例操作，如下
+
+```shell
+$ zip -r yourFile.zip path/to/file -x ".*" -x "__MACOSX" 
+  adding: surgeon.txt (deflated 71%)
+$ unzip -l yourFile.zip 
+Archive:  patch.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1385  04-01-2022 11:17   1.txt
+---------                     -------
+     1385                     1 file
+```
 
 
 
@@ -271,4 +295,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MA
 [^8]:https://apple.stackexchange.com/questions/232449/remove-other-from-login-screen
 [^9]:https://my.oschina.net/u/4387124/blog/3250829
 [^10]:https://superuser.com/questions/1490326/how-to-delete-system-apps-in-macos-catalina
+
+[^9]:https://perishablepress.com/remove-macosx-ds-store-zip-files-mac/
 
