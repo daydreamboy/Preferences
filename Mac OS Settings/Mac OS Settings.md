@@ -220,7 +220,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MA
 
 
 
-## 11、压缩文件不带`__MACOSX`文件夹和`.DS_Store`文件[^9]
+## 11、压缩文件不带`__MACOSX`文件夹和`.DS_Store`文件[^11]
 
 在MacOS下，使用Finder压缩一个文件，会默认带`__MACOSX`文件夹，可能还会带`.DS_Store`。
 
@@ -248,7 +248,7 @@ Archive:  patch.zip
 
 
 
-## 11、删除系统自带app
+## 12、删除系统自带app
 
 - 重启macOS，屏幕变黑时，按住⌘+R直到出现Logo[^9]
 - Terminal，输入下面命令[^8]
@@ -276,6 +276,16 @@ Archive:  patch.zip
 
 
 
+## 13、`._`开头的文件
+
+以`._`开头的文件，即使使用`Cmd+Shift+.`显示隐藏文件，也显示不出来[^12]。
+
+说明
+
+> 以`._`开头，不适用于文件夹，可以使用`Cmd+Shift+.`显示
+
+
+
 ## References
 
 [^1]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
@@ -296,5 +306,7 @@ Archive:  patch.zip
 [^9]:https://my.oschina.net/u/4387124/blog/3250829
 [^10]:https://superuser.com/questions/1490326/how-to-delete-system-apps-in-macos-catalina
 
-[^9]:https://perishablepress.com/remove-macosx-ds-store-zip-files-mac/
+[^11]:https://perishablepress.com/remove-macosx-ds-store-zip-files-mac/
+
+[^12]:https://freefilesync.org/forum/viewtopic.php?t=8591
 
