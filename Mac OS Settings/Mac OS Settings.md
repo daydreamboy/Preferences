@@ -4,13 +4,13 @@
 
 ## 1、显示所有隐藏文件[^1]
 
-### （1）临时显示隐藏文件
+### (1) 临时显示隐藏文件
 
 使用快捷键[^6]：`⌘ + ⇧ + .`
 
 
 
-### （2）永久显示隐藏文件
+### (2) 永久显示隐藏文件
 
 Terminal输入下面命令，如下
 
@@ -36,9 +36,7 @@ $ sudo spctl --master-disable
 
 ## 3、文件的@属性
 
-
-
-### （1）查看@属性
+### (1) 查看@属性
 
 ```shell
 $ ls -l@
@@ -46,7 +44,7 @@ $ ls -l@
 
 
 
-### （2）移除@属性
+### (2) 移除@属性
 
 ```shell
 $ xattr -c <file>
@@ -55,8 +53,6 @@ $ xattr -c <file>
 
 
 ## 4、禁用System Integrity Protection
-
-
 
 - 重启macOS，屏幕变黑时，按住⌘+R直到出现Logo
 - Utilities -> Terminal，输入csrutil disable; reboot
@@ -83,9 +79,7 @@ killall SystemUIServer
 
 ## 6、制作Finder中文件夹或文件的右键菜单[^4]
 
-
-
-### （1）新建一个workflow
+### (1) 新建一个workflow
 
 * Open **Applications** -> **Automator**
 * **File** -> **New** in the menu bar
@@ -95,7 +89,7 @@ Workflow receives current选择为**files or folders**，in选择为**Finder**�
 
 
 
-### （2）编辑执行脚本
+### (2) 编辑执行脚本
 
 在左侧搜索框搜索**Run Shell Script**，拖拽到编辑区域。
 
@@ -152,7 +146,7 @@ exit 0
 
 
 
-### （3）调试脚本
+### (3) 调试脚本
 
 ​        在左侧搜索框搜索**Get Specific Finder Items**，拖拽到脚本区域上面。添加一个Finder中的文件或文件夹，作为**Run Shell Script**的输入参数，点击**Run**按钮进行调试。调试完成，点击右上角的x按钮，移除这个Action。
 
