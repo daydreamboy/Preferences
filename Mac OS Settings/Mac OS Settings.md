@@ -280,6 +280,19 @@ Archive:  patch.zip
 
 
 
+## 14、清理磁盘空间常用目录
+
+如果磁盘空间不够，尝试清理下面常用目录
+
+```c
+// 14.5 (23F79)
+~/Library/Containers/com.apple.CoreDevice.CoreDeviceService/Data/Library/Caches/AppInstallationBinaryDeltas
+```
+
+
+
+
+
 ## References
 
 [^1]:https://apple.stackexchange.com/questions/340542/show-hidden-files-on-mac-os-x-mojave-using-terminal
